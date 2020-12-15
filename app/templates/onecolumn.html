@@ -6,10 +6,10 @@
 -->
 <html>
 	<head>
-		<title>One Column - Halcyonic by HTML5 UP</title>
+		<title>ATB</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
 	</head>
 	<body class="subpage">
 		<div id="page-wrapper">
@@ -21,15 +21,15 @@
 							<div class="col-12">
 
 								<!-- Logo -->
-									<h1><a href="index.html" id="logo">Halcyonic</a></h1>
+									<a href="index.html" id="logo"><img src="{{ url_for('static',filename='images/logo.jpg')}}" alt="Aqaurium and Terrarium Builder"width="125" height="125"></a>
 
 								<!-- Nav -->
 									<nav id="nav">
-										<a href="index.html">Homepage</a>
-										<a href="threecolumn.html">Three Column</a>
-										<a href="twocolumn1.html">Two Column #1</a>
-										<a href="twocolumn2.html">Two Column #2</a>
-										<a href="onecolumn.html">One Column</a>
+										<a href="{{ url_for('index') }}">Homepage</a>
+										<a href="{{ url_for('threecol') }}">Three Column</a>
+										<a href="{{ url_for('twocol_1') }}">Two Column #1</a>
+										<a href="{{ url_for('twocol_2') }}">Two Column #2</a>
+										<a href="{{ url_for('onecol') }}">One Column</a>
 									</nav>
 
 							</div>
@@ -170,17 +170,17 @@
 
 			<!-- Copyright -->
 				<div id="copyright">
-					&copy; Untitled. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+					&copy; Untitled. All rights reserved. | Design: HTML5 UP
 				</div>
 
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="{{ url_for('static',filename='assets/js/jquery.min.js')}}"></script>
+			<script src="{{ url_for('static',filename='assets/js/browser.min.js')}}"></script>
+			<script src="{{ url_for('static',filename='assets/js/breakpoints.min.js')}}"></script>
+			<script src="{{ url_for('static',filename='assets/js/util.js')}}"></script>
+			<script src="{{ url_for('static',filename='assets/js/main.js')}}"></script>
 
 	</body>
 </html>

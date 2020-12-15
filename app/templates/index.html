@@ -6,10 +6,10 @@
 -->
 <html>
 	<head>
-		<title>AATB</title>
+		<title>ATB</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
 	</head>
 	<body>
 		<div id="page-wrapper">
@@ -21,15 +21,15 @@
 							<div class="col-12">
 
 								<!-- Logo -->
-									<a href="index.html" id="logo"><img src="images/logo.jpg" alt=""width="150" height="150"></a>
+									<a href="index.html" id="logo"><img src="{{ url_for('static',filename='images/logo.jpg')}}" alt="Aqaurium and Terrarium Builder"width="150" height="150"></a>
 
 								<!-- Nav -->
 									<nav id="nav">
-										<a href="index.html">Homepage</a>
-										<a href="threecolumn.html">Three Column</a>
-										<a href="twocolumn1.html">Two Column #1</a>
-										<a href="twocolumn2.html">Two Column #2</a>
-										<a href="onecolumn.html">One Column</a>
+										<a href="{{ url_for('index') }}">Homepage</a>
+										<a href="{{ url_for('threecol') }}">Three Column</a>
+										<a href="{{ url_for('twocol_1') }}">Two Column #1</a>
+										<a href="{{ url_for('twocol_2') }}">Two Column #2</a>
+										<a href="{{ url_for('onecol') }}">One Column</a>
 									</nav>
 
 							</div>
@@ -48,7 +48,7 @@
 								<div class="col-6 col-12-medium imp-medium">
 
 									<!-- Banner Image -->
-										<a href="#" class="bordered-feature-image"><img src="images/banner.jpg" alt=""/></a>
+										<a href="#" class="bordered-feature-image"><img src="{{ url_for('static',filename='images/banner.jpg')}}" alt=""/></a>
 
 								</div>
 							</div>
@@ -64,7 +64,7 @@
 
 								<!-- Feature #1 -->
 									<section>
-										<a href="#" class="bordered-feature-image"><img src="images/pic01.jpg" alt="" /></a>
+										<a href="#" class="bordered-feature-image"><img src="{{ url_for('static',filename='images/pic01.jpg')}}" alt="" /></a>
 										<h2>Welcome to Aquarium and Terrarium Builder</h2>
 										<p>
 											This is <strong>ATB</strong>, your one stop shop for 
@@ -77,7 +77,7 @@
 
 								<!-- Feature #2 -->
 									<section>
-										<a href="#" class="bordered-feature-image"><img src="images/pic02.jpg" alt="" /></a>
+										<a href="#" class="bordered-feature-image"><img src="{{ url_for('static',filename='images/pic02.jpg')}}" alt="" /></a>
 										<h2>Responsive You Say?</h2>
 										<p>
 											This site is built to be fully responsive so it looks great
@@ -90,7 +90,7 @@
 
 								<!-- Feature #3 -->
 									<section>
-										<a href="#" class="bordered-feature-image"><img src="images/pic03.jpg" alt="" /></a>
+										<a href="#" class="bordered-feature-image"><img src="{{ url_for('static',filename='images/pic03.jpg')}}" alt="" /></a>
 										<h2>Even More Info</h2>
 										<p>
 											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -103,7 +103,7 @@
 
 								<!-- Feature #4 -->
 									<section>
-										<a href="#" class="bordered-feature-image"><img src="images/pic04.jpg" alt="" /></a>
+										<a href="#" class="bordered-feature-image"><img src="{{ url_for('static',filename='images/pic04.jpg')}}" alt="" /></a>
 										<h2>AND Even More Info</h2>
 										<p>
 											Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed. Suspendisse
@@ -128,7 +128,7 @@
 											<h2>Who We Are</h2>
 											<h3>A subheading about who we are</h3>
 										</header>
-										<a href="#" class="feature-image"><img src="images/pic05.jpg" alt="" /></a>
+										<a href="#" class="feature-image"><img src="{{ url_for('static',filename='images/pic05.jpg')}}" alt="" /></a>
 										<p>
 											Duis neque nisi, dapibus sed mattis quis, rutrum accumsan magna sed.
 											Suspendisse eu varius nibh. Suspendisse vitae magna eget odio amet mollis
@@ -165,17 +165,17 @@
 										</header>
 										<ul class="quote-list">
 											<li>
-												<img src="images/pic06.jpg" alt="" />
+												<img src="{{ url_for('static',filename='images/pic06.jpg')}}" alt="" />
 												<p>"Neque nisidapibus mattis"</p>
 												<span>Jane Doe</span>
 											</li>
 											<li>
-												<img src="images/pic07.jpg" alt="" />
+												<img src="{{ url_for('static',filename='images/pic07.jpg')}}" alt="" />
 												<p>"Lorem ipsum consequat!"</p>
 												<span>John Doe</span>
 											</li>
 											<li>
-												<img src="images/pic08.jpg" alt="" />
+												<img src="{{ url_for('static',filename='images/pic08.jpg')}}" alt="" />
 												<p>"Magna veroeros amet tempus"</p>
 												<span>Mary Smith</span>
 											</li>
@@ -255,17 +255,17 @@
 
 			<!-- Copyright -->
 				<div id="copyright">
-					&copy; Untitled. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+					&copy; Untitled. All rights reserved. | Design: HTML5 UP
 				</div>
 
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="{{ url_for('static',filename='assets/js/jquery.min.js')}}"></script>
+			<script src="{{ url_for('static',filename='assets/js/browser.min.js')}}"></script>
+			<script src="{{ url_for('static',filename='assets/js/breakpoints.min.js')}}"></script>
+			<script src="{{ url_for('static',filename='assets/js/util.js')}}"></script>
+			<script src="{{ url_for('static',filename='assets/js/main.js')}}"></script>
 
 	</body>
 </html>
