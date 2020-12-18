@@ -6,10 +6,13 @@
 -->
 <html>
 	<head>
-		<title>ATB</title>
+		<title>AandTBuilder</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		
 		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+
+		
 	</head>
 	<body>
 		<div id="page-wrapper">
@@ -25,11 +28,10 @@
 
 								<!-- Nav -->
 									<nav id="nav">
-										<a href="{{ url_for('index') }}">Homepage</a>
-										<a href="{{ url_for('threecol') }}">Three Column</a>
-										<a href="{{ url_for('twocol_1') }}">Two Column #1</a>
-										<a href="{{ url_for('twocol_2') }}">Two Column #2</a>
-										<a href="{{ url_for('onecol') }}">One Column</a>
+										<a href="{{ url_for('intro.index') }}">Homepage</a>
+										<a href="{{ url_for('order.order_form') }}">Order Form</a>
+										<a href="{{ url_for('gallery.gallery') }}">Gallery</a>
+										<a href="{{ url_for('about_us.about_us') }}">About Us</a>
 									</nav>
 
 							</div>
@@ -42,13 +44,13 @@
 
 									<!-- Banner Copy -->
 										<p>We do something really useful, important, and unique. Learn all about it here ...</p>
-										<a href="#" class="button-large">Go on, click me!</a>
+										<a href="{{ url_for('about_us.about_us')}}" class="button-large">Go on, click me!</a>
 
 								</div>
 								<div class="col-6 col-12-medium imp-medium">
 
 									<!-- Banner Image -->
-										<a href="#" class="bordered-feature-image"><img src="{{ url_for('static',filename='images/banner.jpg')}}" alt=""/></a>
+										<a class="bordered-feature-image"><img src="{{ url_for('static',filename='images/dark.jpg')}}" alt=""/></a>
 
 								</div>
 							</div>
@@ -64,7 +66,7 @@
 
 								<!-- Feature #1 -->
 									<section>
-										<a href="#" class="bordered-feature-image"><img src="{{ url_for('static',filename='images/pic01.jpg')}}" alt="" /></a>
+										<a href="#" class="bordered-feature-image"><img src="{{ url_for('static',filename='images/light.jpg')}}" alt="" /></a>
 										<h2>Welcome to Aquarium and Terrarium Builder</h2>
 										<p>
 											This is <strong>ATB</strong>, your one stop shop for 
@@ -77,7 +79,7 @@
 
 								<!-- Feature #2 -->
 									<section>
-										<a href="#" class="bordered-feature-image"><img src="{{ url_for('static',filename='images/pic02.jpg')}}" alt="" /></a>
+										<a href="#" class="bordered-feature-image"><img src="{{ url_for('static',filename='images/black.jpg')}}" height="195px" alt="" /></a>
 										<h2>Responsive You Say?</h2>
 										<p>
 											This site is built to be fully responsive so it looks great
@@ -90,7 +92,7 @@
 
 								<!-- Feature #3 -->
 									<section>
-										<a href="#" class="bordered-feature-image"><img src="{{ url_for('static',filename='images/pic03.jpg')}}" alt="" /></a>
+										<a href="#" class="bordered-feature-image"><img src="{{ url_for('static',filename='images/blue.jpg')}}" alt="" /></a>
 										<h2>Even More Info</h2>
 										<p>
 											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -103,7 +105,7 @@
 
 								<!-- Feature #4 -->
 									<section>
-										<a href="#" class="bordered-feature-image"><img src="{{ url_for('static',filename='images/pic04.jpg')}}" alt="" /></a>
+										<a href="#" class="bordered-feature-image"><img src="{{ url_for('static',filename='images/Coral.jpg')}}" alt="" /></a>
 										<h2>AND Even More Info</h2>
 										<p>
 											Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed. Suspendisse
@@ -195,7 +197,7 @@
 
 								<!-- Links -->
 									<section>
-										<h2>Links to Important Stuff</h2>
+										<h2>Discount Links</h2>
 										<div>
 											<div class="row">
 												<div class="col-3 col-12-small">
@@ -239,12 +241,11 @@
 
 								<!-- Blurb -->
 									<section>
-										<h2>An Informative Text Blurb</h2>
+										<h2>Discounts!</h2>
 										<p>
-											Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed. Suspendisse eu
-											varius nibh. Suspendisse vitae magna eget odio amet mollis. Duis neque nisi,
-											dapibus sed mattis quis, sed rutrum accumsan sed. Suspendisse eu varius nibh
-											lorem ipsum amet dolor sit amet lorem ipsum consequat gravida justo mollis.
+											Please take advantage of these websites! They offer anything and everything you could need for your aquarium or terrarium!
+											You could also pick up a discount towards your build if you purchase from the websites! By helping them, you help yourself!
+											Doesn't that sound like a deal or what?! Go on, choose one...
 										</p>
 									</section>
 
