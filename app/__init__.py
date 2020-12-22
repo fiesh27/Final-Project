@@ -18,6 +18,7 @@ def create_app(config_class=Config):
         
         from app.blueprints.info import bp as info
         app.register_blueprint(info)
+        
         from . import routes
 
 

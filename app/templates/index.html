@@ -11,10 +11,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		
 		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
-
 		
 	</head>
 	<body>
+		<div id="fb-root"></div>
+			<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="3rxOXBKW"></script>
+
+
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -162,10 +165,16 @@
 								<!-- Box #3 -->
 									<section>
 										<header>
-											<h2>What People Are Saying</h2>
-											<h3>And a final subheading about our clients</h3>
+											<h2>Check out our Facebook!</h2>
 										</header>
-										<ul class="quote-list">
+										<div class="fb-page"
+											data-small-header="true" 
+											data-tabs="timeline,events,messages"
+											data-href="https://www.facebook.com/AandTBuilder"
+											data-width="380"
+											data-height="330" 
+											data-hide-cover="false"></div>
+										<!-- <ul class="quote-list">
 											<li>
 												<img src="{{ url_for('static',filename='images/pic06.jpg')}}" alt="" />
 												<p>"Neque nisidapibus mattis"</p>
@@ -181,7 +190,7 @@
 												<p>"Magna veroeros amet tempus"</p>
 												<span>Mary Smith</span>
 											</li>
-										</ul>
+										</ul> -->
 									</section>
 
 							</div>
@@ -195,46 +204,28 @@
 						<div class="row">
 							<div class="col-8 col-12-medium">
 
-								<!-- Links -->
-									<section>
-										<h2>Discount Links</h2>
-										<div>
-											<div class="row">
-												<div class="col-3 col-12-small">
-													<ul class="link-list last-child">
-														<li><a href="#">Neque amet dapibus</a></li>
-														<li><a href="#">Sed mattis quis rutrum</a></li>
-														<li><a href="#">Accumsan suspendisse</a></li>
-														<li><a href="#">Eu varius vitae magna</a></li>
-													</ul>
-												</div>
-												<div class="col-3 col-12-small">
-													<ul class="link-list last-child">
-														<li><a href="#">Neque amet dapibus</a></li>
-														<li><a href="#">Sed mattis quis rutrum</a></li>
-														<li><a href="#">Accumsan suspendisse</a></li>
-														<li><a href="#">Eu varius vitae magna</a></li>
-													</ul>
-												</div>
-												<div class="col-3 col-12-small">
-													<ul class="link-list last-child">
-														<li><a href="#">Neque amet dapibus</a></li>
-														<li><a href="#">Sed mattis quis rutrum</a></li>
-														<li><a href="#">Accumsan suspendisse</a></li>
-														<li><a href="#">Eu varius vitae magna</a></li>
-													</ul>
-												</div>
-												<div class="col-3 col-12-small">
-													<ul class="link-list last-child">
-														<li><a href="#">Neque amet dapibus</a></li>
-														<li><a href="#">Sed mattis quis rutrum</a></li>
-														<li><a href="#">Accumsan suspendisse</a></li>
-														<li><a href="#">Eu varius vitae magna</a></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</section>
+				
+												<!-- Links -->
+													<section>
+														<h2>Other Aquatic Needs</h2>
+														<div>
+															<div class="row">
+																<div class="col-3 col-12-small">
+																	<ul class="link-list last-child">
+																		<li><a href="https://gimmetheseaweed.fws.store/">Gimme The Sea Weed - That Chick Reefer</a></li>
+																		<li><a href="https://carolinakidscoral.com/">Carolina Kids Coral</a></li>
+																		<li><a href="https://reefwisesales.com/">Reef Wise</a></li>
+																		
+																	</ul>
+																</div>
+																<div class="col-3 col-12-small">
+																	<ul class="link-list last-child">
+																		<li><a href="https://www.advancedaquaticpets.com/">Advanced Aquatic Pets</a></li>
+																		<li><a href="https://www.stingraybiology.com/">Stingray Biology</a></li>
+																	</ul>
+															</div>
+														</div>
+													</section>
 
 							</div>
 							<div class="col-4 col-12-medium imp-medium">
