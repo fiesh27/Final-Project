@@ -15,11 +15,15 @@
 											<h3>Check out our past builds....See something you like? Let us know!</h3>
 										</header>
 										
-
-										<!-- {% for pic in pics %}  
-										<img src="{{ url_for('static', filename='images/'+pic)}}" alt="">
-										{% endfor %} -->
-
+										<div class='row'>	
+										{% for pic in pics %}  
+										    <div class="col-lg-3 col-md-4 col-6">
+												<a href="{{ url_for('static', filename='gallery/'+pic)}}" class="d-block mb-4 h-100">
+													  <img class="img-fluid img-thumbnail" src="{{ url_for('static', filename='gallery/'+pic)}}" style='object-fit:cover' alt="">
+												</a>
+											</div>
+										{% endfor %}
+										</div>
 										
 									</section>
 
