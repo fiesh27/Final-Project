@@ -2047,3 +2047,10 @@ input, select, textarea {
     width: 225px;
     height: 225px;
 }
+
+@media (min-width: 640px) {
+#logo {
+	height:50%;
+	
+ }
+}
