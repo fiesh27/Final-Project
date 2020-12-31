@@ -5,7 +5,7 @@ from wtforms import StringField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired, Email
 
 class OrderForm(FlaskForm):
-    first_name = StringField('First Name', validators=[DataRequired()])
+    name = StringField('Name', validators=[DataRequired()])
     last_name = StringField('Last Name', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired()])
     address = StringField('Address', validators=[DataRequired()])

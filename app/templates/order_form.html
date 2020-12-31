@@ -11,27 +11,19 @@
 								<!-- Main Content -->
 									<section>
 										<header>
-											<h2>Order Form</h2>
-											<h3>Please fill out and submit the form below! We will contact you within a few days!</h3>
+											<h2>Custom Quote</h2>
+											
 										</header>
 										<form action="">
 											{{ form.hidden_tag() }}
 											<div class="form-group">
 												<fieldset>
-													{{ form.first_name.label }}
-													{{ form.first_name(class='form-control', placeholder='First Name') }}
-												</fieldset>
-												<fieldset>
-													{{ form.last_name.label }}
-													{{ form.last_name(class='form-control', placeholder='Last Name') }}
+													{{ form.name.label }}
+													{{ form.name(class='form-control', placeholder='First & Last Name') }}
 												</fieldset>
 												<fieldset>
 													{{ form.email.label }}
-													{{ form.email(class='form-control', placeholder='Email') }}
-												</fieldset>
-												<fieldset>
-													{{ form.address.label }}
-													{{ form.address(class='form-control', placeholder='Address') }}
+													{{ form.email(class='form-control', placeholder='Email Address') }}
 												</fieldset>
 												<fieldset>
 													{{ form.phone_num.label }}
@@ -39,11 +31,63 @@
 												</fieldset>
 												<fieldset>
 													{{ form.msg.label }}
-													{{ form.msg(class='form-control', placeholder='Message') }}
+													{{ form.msg(class='form-control', placeholder='Aquarium Outer Dimensions in inches (L,W,H) OR choose from our price list!') }}
 												</fieldset>
 												{{ form.submit(class="btn btn-danger", style='margin-top: 30px;') }}
 											</div>
 										</form>
+										
+									</section>
+									<section>
+										<h2 style='font-weight:bold'>Price List</h2>
+										<h1 style='font-size:125%'>** - Custom sizes and additional options are available upon request - **</h1>
+									
+										<p style='margin-top:50px; font-size:150%'>10 ft. Display: Rounded/Polished edges w/ your choice of overflow box are <strong style='font-weight:400'>FREE</strong> with every 10 ft display!</p>
+											<li>750 Gallon 120" Long x 48" Wide x 30" Tall
+												1" Acrylic body, 3/4" top and bottom. <p style='font-weight:500'>$6795</p></li>
+											<li>600 Gallon 120" Long x 48" Wide x 24" Tall
+												3/4" Acrylic body, 3/4" top and bottom. <p style='font-weight:500'>$5795</p></li>
+											<li>560 Gallon 120" Long x 36" Wide x 30" Tall
+												1" Acrylic body, 3/4" top and bottom. <p style='font-weight:500'>$5295</p></li>
+											<li>450 Gallon 120" Long x 36" Wide x 24" Tall
+												3/4" Acrylic body, 3/4" top and bottom. <p style='font-weight:500'>$4495</p></li>
+											<li>300 Gallon 120" Long x 48" Wide x 24" Tall
+												3/4" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$2795</p></li>
+										
+										<p style='margin-top:50px; font-size:150%'>8 ft. Display: Rounded/Polished edges w/ your choice of overflow box are <strong style='font-weight:400'>FREE</strong> with every 8 ft display!</p>
+											<li>600 Gallon 96" Long x 48" Wide x 30" Tall
+												3/4" Acrylic body, 3/4" top and bottom. <p style='font-weight:500'>$3795</p></li>
+											<li>480 Gallon 96" Long x 48" Wide x 24" Tall
+												3/4" Acrylic body, 3/4" top and bottom. <p style='font-weight:500'>$2995</p></li>
+											<li>375 Gallon 96" Long x 30" Wide x 30" Tall
+												3/4" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$2495</p></li>
+											<li>360 Gallon 96" Long x 36" Wide x 24" Tall
+												3/4" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$2495</p></li>
+											<li>300 Gallon 96" Long x 30" Wide x 24" Tall
+												1/2" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$1895</p></li>
+											<li>240 Gallon 96" Long x 24" Wide x 24" Tall
+												1/2" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$1495</p></li>
+
+										<p style='margin-top:50px; font-size:150%'>6 ft. Display: Rounded/Polished edges w/ your choice of overflow box are <strong style='font-weight:400'>FREE</strong> with every 6 ft display!</p>
+											<li>450 Gallon 72" Long x 48" Wide x 30" Tall
+												3/4" Acrylic body, 3/4" top and bottom. <p style='font-weight:500'>$3295</p></li>
+											<li>360 Gallon 72" Long x 48" Wide x 24" Tall
+												3/4" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$2695</p></li>
+											<li>280 Gallon 72" Long x 30" Wide x 30" Tall
+												3/4" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$2295</p></li>
+											<li>225 Gallon 72" Long x 24" Wide x 30" Tall
+												3/4" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$1895</p></li>
+											<li>180 Gallon 72" Long x 24" Wide x 24" Tall
+												1/2" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$1295</p></li>
+										
+										<p style='margin-top:50px; font-size:150%'>4 ft. Display: Rounded/Polished edges included.</p>
+											<li>300 Gallon 48" Long x 48" Wide x 30" Tall
+												3/4" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$1995</p></li>
+											<li>240 Gallon 48" Long x 48" Wide x 24" Tall
+												1/2" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$1395</p></li>
+											<li>120 Gallon 48" Long x 24" Wide x 24" Tall
+												1/2" Acrylic body, 3/8" top and bottom. <p style='font-weight:500'>$695</p></li>
+
 									</section>
 
 							</div>
@@ -54,7 +98,7 @@
 										<header>
 											<h2>Contact Info</h2>
 										</header>
-										<ul class="link-list">
+										<ul>
 											<li>Address</li>
 											<li>Phone Number</li>
 											<li>Email</li>
@@ -63,18 +107,39 @@
 									</section>
 									<section>
 										<header>
-											<h2>Ipsum Dolor</h2>
+											<h2 style='font-weight:bold'>Aquarium Sump Filter</h2>
 										</header>
-										<p>
-											Vehicula fermentum ligula at pretium. Suspendisse semper iaculis eros, eu aliquam
-											iaculis. Phasellus ultrices diam sit amet orci lacinia sed consequat.
+										<p style='font-size:115%'>
+											** - Custom sizes and additional options are available. - **
 										</p>
-										<ul class="link-list">
-											<li><a href="#">Sed dolore viverra</a></li>
-											<li><a href="#">Ligula non varius</a></li>
-											<li><a href="#">Dis parturient montes</a></li>
-											<li><a href="#">Nascetur ridiculus</a></li>
-										</ul>
+										
+											<li>53 Gallon 48" Long x 16" Wide x 16" Tall <p style='font-weight:500'>$449</p></li>
+											<li>65 Gallon 48" Long x 24" Wide x 16" Tall <p style='font-weight:500'>$499</p></li>
+											<li>85 Gallon 72" Long x 16" Wide x 16" Tall<p style='font-weight:500'>$599</p></li>
+										<header>
+											<h2 style='font-weight:bold'>All In One (AIO) Display </h2>
+										</header>	
+											<p style='font-size:115%'>
+												** - Custom sizes and additional options are available. - ** 
+											</p>
+
+												<li>300 Gallon 96" Long x 30" Wide x 24" Tall <p style='font-weight:500'>$2395</p> </li>
+												<li>180 Gallon 72" Long x 24" Wide x 24" Tall <p style='font-weight:500'>$1595</p></li>
+												<li>120 Gallon 48" Long x 24" Wide x 24" Tall <p style='font-weight:500'>$895</p></li>
+												<li>60 Gallon 24" Long x 24" Wide x 24" Tall  <p style='font-weight:500'>$495</p></li>
+										
+										
+										<header>
+											<h2 style='font-weight:bold'>Frag Tanks</h2>
+										</header>
+
+										<p style='font-size:115%'>
+											** - Custom sizes and additional options are available. - ** 
+										</p>
+
+											<li>240 Gallon 96" Long x 48" Wide x 12" Tall <p style='font-weight:500'>$1195</p></li>
+											<li>60 Gallon 48" Long x 24" Wide x 12" Tall <p style='font-weight:500'>$445</p></li>
+										
 									</section>
 
 							</div>

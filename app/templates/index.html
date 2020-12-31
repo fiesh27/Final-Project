@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>AandTBuilder</title>
+		<title>A & T Builder</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		
@@ -17,7 +17,7 @@
 		<div id="fb-root"></div>
 			<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="3rxOXBKW"></script>
 
-
+		
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -27,7 +27,7 @@
 							<div class="col-12">
 
 								<!-- Logo -->
-									<a href="index.html" id="logo"><img src="{{ url_for('static',filename='images/logo.jpg')}}" alt="Aqaurium and Terrarium Builder"width="150" height="150"></a>
+									<a href="{{url_for('intro.index')}}" id="logo"><img src="{{ url_for('static',filename='images/logo.jpg')}}" alt="Aqaurium and Terrarium Builder"width="150" height="150"></a>
 
 								<!-- Nav -->
 									<nav id="nav">
