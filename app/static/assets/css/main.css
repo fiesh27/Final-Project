@@ -103,11 +103,11 @@ input, select, textarea {
 	}
 
 	a {
-		text-decoration: underline;
+		text-decoration: none;
 	}
 
 		a:hover {
-			text-decoration: none;
+			text-decoration: underline;
 		}
 
 	section > :last-child,
@@ -1629,7 +1629,7 @@ input, select, textarea {
 		}
 
 		#content a {
-			color: #ED391B;
+			color: #000000;
 		}
 
 		#content header {
@@ -1952,6 +1952,8 @@ input, select, textarea {
 			}
 
 	}
+
+
 
 /* Small */
 

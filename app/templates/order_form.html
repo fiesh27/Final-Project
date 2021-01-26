@@ -31,7 +31,7 @@
 												</fieldset>
 												<fieldset>
 													{{ form.msg.label }}
-													{{ form.msg(class='form-control', placeholder='Aquarium Outer Dimensions in inches (L,W,H) OR choose from our price list!') }}
+													{{ form.msg(class='form-control', placeholder='Aquarium Outer Dimensions in inches (L,W,H)') }}
 												</fieldset>
 												{{ form.submit(class="btn btn-danger", style='margin-top: 30px;') }}
 											</div>
@@ -41,9 +41,13 @@
 									<section>
 										<h2 style='font-weight:bold'>Price List</h2>
 										<h1 style='font-size:125%'>** - Custom sizes and additional options are available upon request - **</h1>
-									
-										<p style='margin-top:50px; font-size:150%'>10 ft. Display: Rounded/Polished edges w/ your choice of overflow box are <strong style='font-weight:400'>FREE</strong> with every 10 ft display!</p>
-											<li>750 Gallon 120" Long x 48" Wide x 30" Tall
+										<a href="{{ url_for('static', filename='gallery/photo1.jpg') }}">
+											<img class="img-thumbnail" src="{{ url_for('static', filename='gallery/photo1.jpg') }}"style='object-fit:cover; margin-top:25px; margin-bottom:-25px; height:175px; width:175px' alt="">
+										</a>
+										<a href="#">
+											<p style='margin-top:50px; font-size:150%'>10 ft. Display: Rounded/Polished edges w/ your choice of overflow box are <strong style='font-weight:400'>FREE</strong> with every 10 ft display!</p>
+										</a>
+											<!-- <li>750 Gallon 120" Long x 48" Wide x 30" Tall
 												1" Acrylic body, 3/4" top and bottom. <p style='font-weight:500'>$6795</p></li>
 											<li>600 Gallon 120" Long x 48" Wide x 24" Tall
 												3/4" Acrylic body, 3/4" top and bottom. <p style='font-weight:500'>$5795</p></li>
@@ -52,7 +56,7 @@
 											<li>450 Gallon 120" Long x 36" Wide x 24" Tall
 												3/4" Acrylic body, 3/4" top and bottom. <p style='font-weight:500'>$4495</p></li>
 											<li>300 Gallon 120" Long x 48" Wide x 24" Tall
-												3/4" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$2795</p></li>
+												3/4" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$2795</p></li> -->
 										
 										<p style='margin-top:50px; font-size:150%'>8 ft. Display: Rounded/Polished edges w/ your choice of overflow box are <strong style='font-weight:400'>FREE</strong> with every 8 ft display!</p>
 											<li>600 Gallon 96" Long x 48" Wide x 30" Tall
