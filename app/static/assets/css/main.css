@@ -2054,3 +2054,84 @@ input, select, textarea {
 	width: 10vw;
 	height: auto;
 }
+
+#priceListImg {
+	width:100%;
+	height:auto;
+}
+
+.productListHeader {
+	margin-top:50px;
+	font-size:150%;
+	padding:10px;
+	background-image: linear-gradient(90deg, #f6f6f6 0%, #f6f6f6 50%, #4c4f4e 50%, #4c4f4e 100%);
+    background-size: 200%;
+    transition: background-position .3s cubic-bezier(.47, .1, 1, .63), color .2s linear;
+}
+
+.productListHeader:hover {
+	color:#f6f6f6;
+	cursor:pointer;
+    background-position: -100% 100%;
+}
+
+#productListWrapper {
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100vw;
+	height:100vh;
+	background-color:rgba(0, 0, 0, 0.8);
+	display:none;
+}
+
+.productList {
+	width:80vw;
+	height:80vh;
+	position:fixed;
+	top:-100vh;
+	visibility:hidden;
+	left:10vw;
+	background-color:#ffffff;
+	text-align:center;
+	transition:1s top;
+	overflow-y:auto;
+	padding-top:30px;
+}
+
+.exitBtn {
+	position:absolute;
+	top:5px;
+	right:5px;
+	width:20px;
+	height:20px;
+	background-image: url(../../images/exitIcon.svg);
+	background-size:contain;
+}
+
+.singleProductWrapper {
+	position:relative;
+	width:40%;
+	display:inline-block;
+	margin-right:4%;
+	margin-left:4%;
+	
+}
+
+@media screen and (max-width: 800px){
+	.singleProductWrapper {
+		width:80%;
+	}
+}
+
+
+
+.singleProductImage {
+	width:100%;
+	height:auto;
+}
+
+.singleProductDollarAmount {
+	font-weight:500;
+	font-size:2em;
+}
