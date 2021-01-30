@@ -1,7 +1,26 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<script type="text/javascript">
+	function showProductList(x){
+		closeProductList()
+		document.getElementById('productListWrapper').style.display='block';
+		document.getElementsByClassName('productList')[x].style.top="10vh";
+		document.getElementsByClassName('productList')[x].style.visibility="visible";
+	}
 
+	function closeProductList(){
+		var amount = document.getElementsByClassName('productList').length - 1;
+		console.log(amount);
+		for(var i=0; i<=amount; i++){
+			document.getElementsByClassName('productList')[i].style.top="-100vh";
+			document.getElementsByClassName('productList')[i].style.visibility="hidden";
+		}
+		document.getElementById('productListWrapper').style.display='none';
+		
+	}
+
+</script>
 			<!-- Content -->
 				<section id="content">
 					<div class="container">
@@ -41,57 +60,17 @@
 									<section>
 										<h2 style='font-weight:bold'>Price List</h2>
 										<h1 style='font-size:125%'>** - Custom sizes and additional options are available upon request - **</h1>
-										<a href="{{ url_for('static', filename='gallery/photo1.jpg') }}">
-											<img class="img-thumbnail" src="{{ url_for('static', filename='gallery/photo1.jpg') }}"style='object-fit:cover; margin-top:25px; margin-bottom:-25px; height:175px; width:175px' alt="">
-										</a>
-										<a href="#">
-											<p style='margin-top:50px; font-size:150%'>10 ft. Display: Rounded/Polished edges w/ your choice of overflow box are <strong style='font-weight:400'>FREE</strong> with every 10 ft display!</p>
-										</a>
-											<!-- <li>750 Gallon 120" Long x 48" Wide x 30" Tall
-												1" Acrylic body, 3/4" top and bottom. <p style='font-weight:500'>$6795</p></li>
-											<li>600 Gallon 120" Long x 48" Wide x 24" Tall
-												3/4" Acrylic body, 3/4" top and bottom. <p style='font-weight:500'>$5795</p></li>
-											<li>560 Gallon 120" Long x 36" Wide x 30" Tall
-												1" Acrylic body, 3/4" top and bottom. <p style='font-weight:500'>$5295</p></li>
-											<li>450 Gallon 120" Long x 36" Wide x 24" Tall
-												3/4" Acrylic body, 3/4" top and bottom. <p style='font-weight:500'>$4495</p></li>
-											<li>300 Gallon 120" Long x 48" Wide x 24" Tall
-												3/4" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$2795</p></li> -->
+										<img src="../static/images/sampleProductImg.jpg" id="priceListImg"/>
 										
-										<p style='margin-top:50px; font-size:150%'>8 ft. Display: Rounded/Polished edges w/ your choice of overflow box are <strong style='font-weight:400'>FREE</strong> with every 8 ft display!</p>
-											<li>600 Gallon 96" Long x 48" Wide x 30" Tall
-												3/4" Acrylic body, 3/4" top and bottom. <p style='font-weight:500'>$3795</p></li>
-											<li>480 Gallon 96" Long x 48" Wide x 24" Tall
-												3/4" Acrylic body, 3/4" top and bottom. <p style='font-weight:500'>$2995</p></li>
-											<li>375 Gallon 96" Long x 30" Wide x 30" Tall
-												3/4" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$2495</p></li>
-											<li>360 Gallon 96" Long x 36" Wide x 24" Tall
-												3/4" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$2495</p></li>
-											<li>300 Gallon 96" Long x 30" Wide x 24" Tall
-												1/2" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$1895</p></li>
-											<li>240 Gallon 96" Long x 24" Wide x 24" Tall
-												1/2" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$1495</p></li>
-
-										<p style='margin-top:50px; font-size:150%'>6 ft. Display: Rounded/Polished edges w/ your choice of overflow box are <strong style='font-weight:400'>FREE</strong> with every 6 ft display!</p>
-											<li>450 Gallon 72" Long x 48" Wide x 30" Tall
-												3/4" Acrylic body, 3/4" top and bottom. <p style='font-weight:500'>$3295</p></li>
-											<li>360 Gallon 72" Long x 48" Wide x 24" Tall
-												3/4" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$2695</p></li>
-											<li>280 Gallon 72" Long x 30" Wide x 30" Tall
-												3/4" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$2295</p></li>
-											<li>225 Gallon 72" Long x 24" Wide x 30" Tall
-												3/4" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$1895</p></li>
-											<li>180 Gallon 72" Long x 24" Wide x 24" Tall
-												1/2" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$1295</p></li>
+										<p class="productListHeader" onclick="showProductList(0)"><strong style='font-weight:400'>10 ft. Display:</strong> Rounded/Polished edges w/ your choice of overflow box are <strong style='font-weight:400'>FREE</strong> with every 10 ft display!</p>
 										
-										<p style='margin-top:50px; font-size:150%'>4 ft. Display: Rounded/Polished edges included.</p>
-											<li>300 Gallon 48" Long x 48" Wide x 30" Tall
-												3/4" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$1995</p></li>
-											<li>240 Gallon 48" Long x 48" Wide x 24" Tall
-												1/2" Acrylic body, 1/2" top and bottom. <p style='font-weight:500'>$1395</p></li>
-											<li>120 Gallon 48" Long x 24" Wide x 24" Tall
-												1/2" Acrylic body, 3/8" top and bottom. <p style='font-weight:500'>$695</p></li>
-
+										<p class="productListHeader" onclick="showProductList(1)"><strong style='font-weight:400'>8 ft. Display:</strong> Rounded/Polished edges w/ your choice of overflow box are <strong style='font-weight:400'>FREE</strong> with every 8 ft display!</p>
+											
+										<p class="productListHeader" onclick="showProductList(2)"><strong style='font-weight:400'>6 ft. Display:</strong> Rounded/Polished edges w/ your choice of overflow box are <strong style='font-weight:400'>FREE</strong> with every 6 ft display!</p>
+											
+										<p class="productListHeader" onclick="showProductList(3)"><strong style='font-weight:400'>4 ft. Display:</strong> Rounded/Polished edges included.<br /><br /></p>
+											
+											
 									</section>
 
 							</div>
@@ -150,5 +129,118 @@
 						</div>
 					</div>
 				</section>
+
+				<div id="productListWrapper" onclick="closeProductList()"></div>
+				<ul class="productList">
+					<div class="exitBtn" onclick="closeProductList()"></div>
+					<div class="singleProductWrapper">
+						<img src="../static/images/sampleProductImg.jpg" class="singleProductImage"/>
+						<li>750 Gallon 120" Long x 48" Wide x 30" Tall
+							1" Acrylic body, 3/4" top and bottom. <p class="singleProductDollarAmount">$6795</p></li>
+					</div>
+					<div class="singleProductWrapper">
+						<img src="../static/images/sampleProductImg.jpg" class="singleProductImage"/>
+						<li>600 Gallon 120" Long x 48" Wide x 24" Tall
+							3/4" Acrylic body, 3/4" top and bottom.<p class="singleProductDollarAmount">$5795</p></li>
+					</div>
+					<div class="singleProductWrapper">
+						<img src="../static/images/sampleProductImg.jpg" class="singleProductImage"/>
+						<li>560 Gallon 120" Long x 36" Wide x 30" Tall
+						1" Acrylic body, 3/4" top and bottom.<p class="singleProductDollarAmount">$5295</p></li>
+					</div>
+					<div class="singleProductWrapper">
+						<img src="../static/images/sampleProductImg.jpg" class="singleProductImage"/>
+						<li>450 Gallon 120" Long x 36" Wide x 24" Tall
+							3/4" Acrylic body, 3/4" top and bottom. <p class="singleProductDollarAmount">$4495</p></li>
+					</div>
+					<div class="singleProductWrapper">
+						<img src="../static/images/sampleProductImg.jpg" class="singleProductImage"/>
+						<li>300 Gallon 120" Long x 48" Wide x 24" Tall
+							3/4" Acrylic body, 1/2" top and bottom.<p class="singleProductDollarAmount">$2795</p></li>
+					</div>	
+
+				</ul>
+				<ul class="productList">
+					<div class="exitBtn" onclick="closeProductList()"></div>
+					<div class="singleProductWrapper">
+						<img src="../static/images/sampleProductImg.jpg" class="singleProductImage"/>
+						<li>600 Gallon 96" Long x 48" Wide x 30" Tall
+							3/4" Acrylic body, 3/4" top and bottom.<p class="singleProductDollarAmount">$3795</p></li>
+					</div>	
+					<div class="singleProductWrapper">
+						<img src="../static/images/sampleProductImg.jpg" class="singleProductImage"/>
+						<li>480 Gallon 96" Long x 48" Wide x 24" Tall
+							3/4" Acrylic body, 3/4" top and bottom.<p class="singleProductDollarAmount">$2995</p></li>
+					</div>
+					<div class="singleProductWrapper">
+						<img src="../static/images/sampleProductImg.jpg" class="singleProductImage"/>
+						<li>375 Gallon 96" Long x 30" Wide x 30" Tall
+							3/4" Acrylic body, 1/2" top and bottom.<p class="singleProductDollarAmount">$2495</p></li>
+					</div>
+					<div class="singleProductWrapper">
+						<img src="../static/images/sampleProductImg.jpg" class="singleProductImage"/>
+						<li>360 Gallon 96" Long x 36" Wide x 24" Tall
+							3/4" Acrylic body, 1/2" top and bottom.<p class="singleProductDollarAmount">$2495</p></li>
+					</div>
+					<div class="singleProductWrapper">
+						<img src="../static/images/sampleProductImg.jpg" class="singleProductImage"/>
+						<li>300 Gallon 96" Long x 30" Wide x 24" Tall
+							1/2" Acrylic body, 1/2" top and bottom.<p class="singleProductDollarAmount">$1895</p></li>
+					</div>
+					<div class="singleProductWrapper">
+						<img src="../static/images/sampleProductImg.jpg" class="singleProductImage"/>
+						<li>240 Gallon 96" Long x 24" Wide x 24" Tall
+							1/2" Acrylic body, 1/2" top and bottom.<p class="singleProductDollarAmount">$1495</p></li>
+					</div>
+					
+				</ul>
+				<ul class="productList">
+					<div class="exitBtn" onclick="closeProductList()"></div>
+					<div class="singleProductWrapper">
+						<img src="../static/images/sampleProductImg.jpg" class="singleProductImage"/>
+						<li>450 Gallon 72" Long x 48" Wide x 30" Tall
+							3/4" Acrylic body, 3/4" top and bottom. <p class="singleProductDollarAmount">$3295</p></li>
+					</div>
+					<div class="singleProductWrapper">
+						<img src="../static/images/sampleProductImg.jpg" class="singleProductImage"/>
+						<li>360 Gallon 72" Long x 48" Wide x 24" Tall
+							3/4" Acrylic body, 1/2" top and bottom. <p class="singleProductDollarAmount">$2695</p></li>
+					</div>
+					<div class="singleProductWrapper">
+						<img src="../static/images/sampleProductImg.jpg" class="singleProductImage"/>
+						<li>280 Gallon 72" Long x 30" Wide x 30" Tall
+							3/4" Acrylic body, 1/2" top and bottom.<p class="singleProductDollarAmount">$2295</p></li>
+					</div>
+					<div class="singleProductWrapper">
+						<img src="../static/images/sampleProductImg.jpg" class="singleProductImage"/>
+						<li>225 Gallon 72" Long x 24" Wide x 30" Tall
+							3/4" Acrylic body, 1/2" top and bottom.<p class="singleProductDollarAmount">$1895</p></li>
+					</div>
+					<div class="singleProductWrapper">
+						<img src="../static/images/sampleProductImg.jpg" class="singleProductImage"/>
+						<li>180 Gallon 72" Long x 24" Wide x 24" Tall
+							1/2" Acrylic body, 1/2" top and bottom.<p class="singleProductDollarAmount">$1295</p></li>
+					</div>
+				
+				</ul>
+				<ul class="productList">
+					<div class="exitBtn" onclick="closeProductList()"></div>
+					<div class="singleProductWrapper">
+						<img src="../static/images/sampleProductImg.jpg" class="singleProductImage"/>
+						<li>300 Gallon 48" Long x 48" Wide x 30" Tall
+							3/4" Acrylic body, 1/2" top and bottom.<p class="singleProductDollarAmount">$1995</p></li>
+					</div>
+					<div class="singleProductWrapper">
+						<img src="../static/images/sampleProductImg.jpg" class="singleProductImage"/>
+						<li>240 Gallon 48" Long x 48" Wide x 24" Tall
+							1/2" Acrylic body, 1/2" top and bottom.<p class="singleProductDollarAmount">$1395</p></li>
+					</div>
+					<div class="singleProductWrapper">
+						<img src="../static/images/sampleProductImg.jpg" class="singleProductImage"/>
+						<li>120 Gallon 48" Long x 24" Wide x 24" Tall
+							1/2" Acrylic body, 3/8" top and bottom.<p class="singleProductDollarAmount">$695</p></li>
+					</div>
+
+				</ul>
 
 {% endblock content %}
